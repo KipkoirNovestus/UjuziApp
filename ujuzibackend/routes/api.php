@@ -10,3 +10,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 Route::apiResource('/client', ClientController::class);
 Route::apiResource('/caregiver', CaregiverController::class);
+Route::post('register',[userregistration::class,'registeruser']);
+Route::post('login',[UserController::class,'login']);
