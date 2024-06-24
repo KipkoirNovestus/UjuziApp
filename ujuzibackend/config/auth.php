@@ -14,8 +14,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => env('AUTH_GUARD', 'web'), // changed to 'api'
-        // 'guard' => env('AUTH_GUARD', 'api'),
+        'guard' => env('AUTH_GUARD', 'api'), // changed to 'api' from web
+        // 'guard' => env('AUTH_GUARD', 'web'),
         'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),
     ],
 
@@ -47,7 +47,7 @@ return [
         'api'=>[
             'driver'=>'jwt',
             'provider'=>'users',
-            'hash'[false]
+            'hash'=> false
         ]
 
     ],
